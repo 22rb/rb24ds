@@ -1,0 +1,197 @@
+@import "../scss/my_variable";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // outline: 1px solid rgba(255, 40, 40, 0.5);
+}
+
+html {
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  color: var(--color-main);
+}
+body {
+  font-family: "Noto Sans TC", sans-serif, "微軟正黑體", "蘋方體";
+  @include fz(16);
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  // color: #707070;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+p,
+li {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  // word-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+a {
+  color: var(--color-main);
+  text-decoration: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+//消除 IE <br> 的詭異框框(網路字型的Bug)
+br {
+  font-family: unset !important;
+  font: unset !important;
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+.phone.phone.phone {
+  display: none;
+}
+
+.img-full{
+  width: 100%;
+}
+.img-l{
+  max-width: 80%;
+  margin: 0 auto;
+  @include rwd-sm{
+    max-width: 100%;
+  }
+}
+.img-m{
+  max-width: 60%;
+  margin: 0 auto;
+  @include rwd-sm{
+    max-width: 100%;
+  }
+}
+.img-s{
+  max-width: 40%;
+  margin: 0 auto;
+  @include rwd-sm{
+    max-width: 100%;
+  }
+}
+.btn-link{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.link{
+  transition: all 0.3s;
+  display: block;
+  letter-spacing: 0.05em;
+  &:before{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 999em;
+    background-color: #000;
+    margin-right: 0.5em;
+  }
+  &:hover{
+    // transform: translateX(-5%);
+    letter-spacing: 0.3em;
+  }
+}
+.link-noDeco{
+  font-size: 14px;
+  &:before{
+    display: none;
+  }
+}
+.link-b{
+
+}
+.text-align-center{
+  text-align: center;
+}
+
+.contentMaxWidth{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 60px;
+
+}
+
+.sticky {
+  position: sticky;
+  top: -100px;
+  @include rwd-lg{
+    top: -28px;
+  }
+  @include rwd-sm{
+    top: 0px;
+  }
+}
+// .caseAn{
+//   position: unset;
+//   // top: -100px;
+// }
+// .caseSticky{
+//   // background-color: #555 !important;
+//   // position: fixed;
+//   top:  0;
+// }
+
+
+.cursor {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  // background-color: #ffffff;
+  border: 1px solid #fff;
+  mix-blend-mode: difference;
+  position: fixed;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  pointer-events: none;
+  position: fixed;
+  z-index: 200;
+  // opacity: 0;
+  &.view{
+    mix-blend-mode: unset;
+    background-color: #fff;
+    &:after{
+      content: 'More';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      @include fontStyle;
+    }
+  }
+  @include rwd-lg{
+    display: none;
+  }
+}
+.hidden{
+  display: none;
+}

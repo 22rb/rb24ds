@@ -1,0 +1,248 @@
+//**********************************************************
+//page
+//**********************************************************
+.wrapperPage{
+  padding: 0 3%;
+  width: 100%;
+  @include rwd-sm{
+    padding: 0 30px;
+  }
+}
+.contentPage {
+  // padding: var(--block-pd);
+  max-width: 1400px;
+ margin: 0 auto;
+//  padding-top: 30px;
+
+  p{
+    // margin-top: 4em;
+    // margin-bottom: 4em;
+  }
+
+}
+.page-head{
+  // padding: var(--page-content-pd);
+}
+.page-head-title{
+  @include fontStyle;
+  @include fz(60);
+  // margin-top: 1em;
+  // padding-top: 1em;
+  margin-bottom: 0.5em;
+  @include rwd-sm{
+    font-size: 24px;
+  }
+}
+.page-head-subTitle{
+  @include fz(20);
+  margin-bottom: 4em;
+  // padding-bottom: 30px;
+  @include rwd-sm{
+    margin-bottom: 2em;
+    font-size: 18px;
+  }
+}
+.page-body{
+  >*+*{
+    margin-top: 100px;
+    @include rwd-sm{
+      margin-top: 40px;
+    }
+  }
+}
+.page-body-img{
+  // padding: var(--page-content-pd);
+}
+.page-img {
+  width: 100%;
+  // height: 56.25%;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+
+}
+.row{
+  .page-img{
+    @include rwd-sm{
+      padding: 30px;
+    }
+  }
+}
+.caseInfo{
+  margin: 80px 0;
+}
+.caseInfo-title{
+  @include fz(24);
+  margin-top: 0;
+  font-weight: 600;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  padding: 0 6% 2em;
+  border-bottom: 1px solid var(--color-main);
+}
+.caseInfo-content{
+  display: flex;
+  align-items: start;
+  padding: 0 6%;
+  @include rwd-md{
+    flex-direction: column;
+  }
+}
+.caseInfo-main{
+  // width: 70%;
+  padding-right: 60px;
+  border-right: 1px solid var(--color-main);
+  >*:nth-of-type(1){
+    margin-top: 0;
+  }
+  @include rwd-md{
+    border-right: 0px solid var(--color-main);
+    // border-bottom: 1px solid var(--color-main);
+    padding-right: 0;
+  }
+}
+.caseInfo-side{
+  display: flex;
+  flex-grow: 0;
+  @include rwd-lg{
+    flex-direction: column;
+  }
+  
+}
+.caseInfo-item{
+ font-size: 14px;
+//  padding: 0 30px;
+ padding-left: 60px;
+ word-break: keep-all;
+
+  >*:nth-of-type(1){
+    margin-top: 0;
+  }
+  @include rwd-lg{
+    &+&{
+      margin-top: 2em;
+    }
+  }
+  @include rwd-md{
+    padding-left: 0;
+    margin-top: 2em;
+  }
+}
+.pageType{
+  font-weight: 600;
+  margin-bottom: 1.2em;
+}
+.pageTypeItem{
+  word-break: break-all;
+  white-space:nowrap;
+  color: var(--color-secondary);
+  >*{
+    margin-bottom: 0.5em;
+  }
+}
+.page-txt{
+  text-align: center;
+  @include rwd-lg{
+    text-align-last: left;
+  }
+}
+.page-video{
+  width: 100%;
+}
+video{
+  width: 100%;
+}
+.moreCase{
+  display: flex;
+  width: 100%;
+  margin-top: 100px;
+  // margin-bottom: 100px;
+  border-top: 1px solid var(--color-main);
+  border-bottom: 1px solid var(--color-main);
+  @include rwd-sm{
+    flex-direction: column;
+  }
+}
+.moreCase-item{
+  // height: 240px;
+  flex-grow: 1;
+  flex-basis: 50%;
+  // overflow: hidden;
+  position: relative;
+  // background-color: #bbf;
+  &+&{
+    border-left: 1px solid var(--color-main);
+    @include rwd-sm{
+      border-left: 0px solid var(--color-main);
+      border-top: 1px solid var(--color-main);
+
+    }
+  }
+  &:hover{
+    .moreCase-img:after{
+      background-color: rgba(255, 255, 255, 0);
+      backdrop-filter:grayscale(0%);
+      width: 0;
+    }
+    .moreCase-txt{
+      opacity: 0;
+    }
+  }
+  
+}
+.moreCase-txt{
+  width: 60%;
+  padding: 45px;
+  opacity: 1;
+  
+  transition: all 1s ease;
+  @include rwd-sm{
+    width: 100%;
+    padding: 20px;
+  }
+}
+.moreCase-title{
+  @include fontStyle;
+  @include fz(40);
+  margin-top: 0;  
+  margin-bottom: 0.4em;
+  text-align: left;
+  line-height: 1.4;
+  @include rwd-sm{
+    font-size: 24px;
+  }
+}
+.moreCase-subTitle{
+  @include fz(16);
+}
+.moreCase-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    backdrop-filter:grayscale(100%);
+    background-color: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s ease;
+  }
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+

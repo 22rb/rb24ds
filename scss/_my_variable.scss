@@ -1,0 +1,121 @@
+//**********************************************************
+//字級
+
+//【使用】 @include size(20);
+
+// @mixin fz($num1: 16) {
+//   $num2: $num1/1920 * 100;
+//   $num3: round($num1 * 0.88);
+//   font-size: clamp(#{$num3}px, #{$num2}vw, #{$num1}px);
+// }
+
+@mixin fz($num: 16) {
+  $num1: calc($num/16);
+  $num2: calc($num/1920 * 100);
+  $num3: round($num1 * 0.88);
+  font-size: clamp(#{$num3}rem, #{$num2}vw, #{$num1}rem);
+}
+
+@mixin fzs($num: 16) {
+  $num1: $num/16;
+  font-size: #{$num1}rem;
+}
+
+//【使用】@extend %fz20;
+@for $i from 12 through 200 {
+  %fz#{$i} {
+    @include fz($i);
+  }
+}
+
+//**********************************************************
+//RWD media
+//【使用】@include rwd-lg{}
+@mixin rwd-xxl {
+  @media screen and (max-width: 1500px) {
+    @content;
+  }
+}
+@mixin rwd-xl {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin rwd-lg {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+@mixin rwd-md {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+@mixin rwd-sm {
+  @media screen and (max-width: 450px) {
+    @content;
+  }
+}
+
+@mixin rwd-max($num) {
+  @media screen and (max-width: #{$num}px) {
+    @content;
+  }
+}
+@mixin rwd-min($num) {
+  @media screen and (min-width: #{$num}px) {
+    @content;
+  }
+}
+
+//**********************************************************
+//顏色
+// $primary: #373737;
+$caseBasicSpacing:8%;
+// $contentMaxWidth:1440px;
+$block-pd:80px 3%;
+
+:root {
+  --color-main: #373737;
+  --color-secondary:#666464;
+  --color-bg: #EBEAE8;
+  --block-pd: 150px 3%;
+  --page-content-pd:0 10%;
+}
+
+@media screen and (max-width: 450px){
+  :root {
+    --block-pd:40px 3%;
+  }
+}
+
+
+//**********************************************************
+//背景圖片
+@mixin max-w($num: 1100) {
+  max-width: #{$num}px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin bgc {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+@mixin df {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//**********************************************************
+//指定字型
+@mixin fontStyle {
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+//**********************************************************
+//其他
