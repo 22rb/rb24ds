@@ -82,7 +82,7 @@
 }
 .caseInfo-content{
   display: flex;
-  align-items: start;
+  align-items: stretch;
   padding: 0 6%;
   @include rwd-md{
     flex-direction: column;
@@ -142,9 +142,9 @@
 }
 .page-txt{
   text-align: center;
-  @include rwd-lg{
-    text-align-last: left;
-  }
+  // @include rwd-lg{
+  //   text-align-last: left;
+  // }
 }
 .page-video{
   width: 100%;
@@ -183,9 +183,17 @@ video{
       background-color: rgba(255, 255, 255, 0);
       backdrop-filter:grayscale(0%);
       width: 0;
+      @include rwd-max(1400){
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter:unset;
+        width: 100%;
+      }
     }
     .moreCase-txt{
       opacity: 0;
+      @include rwd-max(1400){
+        opacity: 1;
+      }
     }
   }
   
@@ -196,8 +204,10 @@ video{
   opacity: 1;
   
   transition: all 1s ease;
-  @include rwd-sm{
+  @include rwd-lg{
     width: 100%;
+  }
+  @include rwd-sm{
     padding: 20px;
   }
 }

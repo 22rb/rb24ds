@@ -188,7 +188,7 @@ br {
       @include fontStyle;
     }
   }
-  @include rwd-lg{
+  @include rwd-xl{
     display: none;
   }
 }

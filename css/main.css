@@ -5022,7 +5022,7 @@ br {
   font-style: normal;
   letter-spacing: 0.02em;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   .cursor {
     display: none;
   }
@@ -5555,7 +5555,7 @@ h1 {
   border-bottom: 1px solid #fff;
 }
 .case.dark .case-main {
-  border-bottom: 1px solid #fff;
+  border-bottom: 0px solid #fff;
 }
 .case.dark .case-main:before, .case.dark .case-main:after {
   background-color: #fff;
@@ -5708,9 +5708,9 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   padding: 0 6%;
 }
 @media screen and (max-width: 600px) {
@@ -5790,12 +5790,6 @@ h1 {
 .page-txt {
   text-align: center;
 }
-@media screen and (max-width: 900px) {
-  .page-txt {
-    -moz-text-align-last: left;
-         text-align-last: left;
-  }
-}
 
 .page-video {
   width: 100%;
@@ -5846,8 +5840,21 @@ video {
           backdrop-filter: grayscale(0%);
   width: 0;
 }
+@media screen and (max-width: 1400px) {
+  .moreCase-item:hover .moreCase-img:after {
+    background-color: rgba(255, 255, 255, 0.85);
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+    width: 100%;
+  }
+}
 .moreCase-item:hover .moreCase-txt {
   opacity: 0;
+}
+@media screen and (max-width: 1400px) {
+  .moreCase-item:hover .moreCase-txt {
+    opacity: 1;
+  }
 }
 
 .moreCase-txt {
@@ -5857,9 +5864,13 @@ video {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 900px) {
   .moreCase-txt {
     width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .moreCase-txt {
     padding: 20px;
   }
 }
@@ -6155,11 +6166,11 @@ video {
 @media screen and (max-width: 900px) {
   .career-item {
     border-top: 0px solid var(--color-main);
+    border-bottom: 1px solid var(--color-main);
   }
 }
 @media screen and (max-width: 450px) {
   .career-item {
-    border-bottom: 1px solid var(--color-main);
     padding: 0 15px;
   }
 }
