@@ -329,7 +329,11 @@
     border-bottom: 1px solid #fff;
   }
   .case-main{
-    border-bottom: 0px solid #fff;
+    border-bottom: 1px solid #fff;
+    @include rwd-sm{
+      border-bottom: 0px solid #fff;
+
+    }
     &:before,&:after{
       background-color: #fff;
     }

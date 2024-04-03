@@ -5555,7 +5555,12 @@ h1 {
   border-bottom: 1px solid #fff;
 }
 .case.dark .case-main {
-  border-bottom: 0px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+@media screen and (max-width: 450px) {
+  .case.dark .case-main {
+    border-bottom: 0px solid #fff;
+  }
 }
 .case.dark .case-main:before, .case.dark .case-main:after {
   background-color: #fff;
