@@ -174,23 +174,23 @@ tl.from(".mainKV-info p", { opacity: 0 }, "+=1");
 tl.from(".case", { opacity: 0 });
 
 //jsTxt
-const jsTxt = gsap.utils.toArray(".js-txt");
-jsTxt.forEach(function (element) {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: element,
-      // markers: true,
-      start: "top 90%",
-      end: "center 50%",
-      scrub: 1,
-      toggleActions: "restart none none reset",
-    },
-  });
+// const jsTxt = gsap.utils.toArray(".js-txt");
+// jsTxt.forEach(function (element) {
+//   const tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: element,
+//       // markers: true,
+//       start: "top 90%",
+//       end: "center 50%",
+//       scrub: 1,
+//       toggleActions: "restart none none reset",
+//     },
+//   });
 
-  tl.from(element, {
-    y: -50,
-    opacity: 0,
-    ease: Power2.out,
-    duration: 1.5,
-  });
-});
+//   tl.from(element, {
+//     y: -50,
+//     opacity: 0,
+//     ease: Power2.out,
+//     duration: 1.5,
+//   });
+// });

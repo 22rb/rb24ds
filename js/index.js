@@ -54,7 +54,7 @@ mainKVtitleChar.forEach(function (element) {
     },
   });
   tl.from(element, {
-    xPercent: -100,
+    // xPercent: -100,
     duration: 0.5,
     ease: Power2.out,
   });
@@ -103,32 +103,32 @@ window.addEventListener("scroll", () => {
 });
 
 //reveal img
-const revealContainers = document.querySelectorAll(".reveal");
+// const revealContainers = document.querySelectorAll(".reveal");
 
-revealContainers.forEach((container) => {
-  const image = container.querySelector("img");
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: container,
-      toggleActions: "restart none none reset",
-      // markers: true,
-    },
-  });
+// revealContainers.forEach((container) => {
+//   const image = container.querySelector("img");
+//   const tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: container,
+//       toggleActions: "restart none none reset",
+//       // markers: true,
+//     },
+//   });
 
-  tl.set(container, { autoAlpha: 1 });
-  tl.from(container, {
-    xPercent: -100,
-    duration: 1.5,
-    ease: Power2.out,
-  });
-  tl.from(image, {
-    xPercent: 100,
-    scale: 1.3,
-    duration: 1.5,
-    delay: -1.5,
-    ease: Power2.out,
-  });
-});
+//   tl.set(container, { autoAlpha: 1 });
+//   tl.from(container, {
+//     xPercent: -100,
+//     duration: 1.5,
+//     ease: Power2.out,
+//   });
+//   tl.from(image, {
+//     xPercent: 100,
+//     scale: 1.3,
+//     duration: 1.5,
+//     delay: -1.5,
+//     ease: Power2.out,
+//   });
+// });
 
 //nav change color
 window.addEventListener("scroll", function () {
