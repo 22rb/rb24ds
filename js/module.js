@@ -141,7 +141,6 @@ const tl = gsap.timeline({
     top: "0",
     duration: 0.3,
     stagger: 0.1,
-    opacity: 0,
   },
 });
 
@@ -165,7 +164,6 @@ const mainKVtitle = gsap.utils.toArray(".mainKV-main p");
 mainKVtitle.forEach(function (element) {
   tl.to(element, {
     duration: 0,
-    opacity: 1,
     onComplete: function () {
       element.classList.add("show");
     },
