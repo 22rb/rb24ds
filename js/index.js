@@ -2,59 +2,63 @@
 Splitting();
 
 //case-main
-const caseMain = gsap.utils.toArray(".case-main");
-caseMain.forEach((container) => {
-  const caseTitle = container.querySelector(".case-title");
-  const caseSubTitle = container.querySelector(".case-subTitle");
-  const caseType = container.querySelector(".case-type");
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: container,
-      // markers: true,
-      scrub: 1,
-      start: "top 90%",
-      end: "center 60%",
-      toggleActions: "restart none none reset",
-    },
-  });
-  tl.from(caseTitle, {
-    opacity: 0,
-    yPercent: 50,
-    duration: 1.5,
-    ease: "power2.inOut",
-  });
-  tl.from(
-    caseSubTitle,
-    {
-      opacity: 0,
-      delay: 1,
-      ease: "power2.inOut",
-    },
-    "<"
-  );
-  tl.from(
-    caseType,
-    {
-      opacity: 0,
-      // delay: -1.5,
-      ease: "power2.inOut",
-    },
-    "<"
-  );
-});
+// const caseMain = gsap.utils.toArray(".case-main");
+// caseMain.forEach((container) => {
+//   const caseTitle = container.querySelector(".case-title");
+//   const caseSubTitle = container.querySelector(".case-subTitle");
+//   const caseType = container.querySelector(".case-type");
+//   const tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: container,
+//       // markers: true,
+//       scrub: 1,
+//       start: "top 90%",
+//       end: "center 60%",
+//       toggleActions: "restart none none reset",
+//     },
+//   });
+//   tl.from(caseTitle, {
+//     opacity: 0,
+//     yPercent: 50,
+//     duration: 1.5,
+//     ease: "power2.inOut",
+//   });
+//   tl.from(
+//     caseSubTitle,
+//     {
+//       opacity: 0,
+//       delay: 1,
+//       ease: "power2.inOut",
+//     },
+//     "<"
+//   );
+//   tl.from(
+//     caseType,
+//     {
+//       opacity: 0,
+//       // delay: -1.5,
+//       ease: "power2.inOut",
+//     },
+//     "<"
+//   );
+// });
 
 //mainKVtitle
 const mainKVtitleChar = gsap.utils.toArray(".mainKV-main p");
 mainKVtitleChar.forEach(function (element) {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: element,
-      toggleActions: "restart none none reset",
-      // markers: true,
-    },
-  });
-  tl.from(element, {
-    // xPercent: -100,
+  // const tl = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: element,
+  //     toggleActions: "restart none none reset",
+  //     // markers: true,
+  //   },
+  // });
+  // tl.from(element, {
+  //   // xPercent: -100,
+  //   duration: 0.5,
+  //   ease: Power2.out,
+  // });
+  gsap.from(element, {
     duration: 0.5,
     ease: Power2.out,
   });
