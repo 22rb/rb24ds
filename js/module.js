@@ -58,7 +58,6 @@ document.body.addEventListener("mouseenter", () => {
 });
 
 const hoverCursors = document.querySelectorAll('[data-cursor="hover"]');
-const caseImg = document.querySelectorAll(".case-img");
 const moreCaseImg = document.querySelectorAll(".moreCase-item");
 const cursor = document.querySelector(".cursor");
 
@@ -144,7 +143,6 @@ const tl = gsap.timeline({
     stagger: 0.1,
   },
 });
-
 tl.to(".openAnItem", {
   zIndex: -1,
 });

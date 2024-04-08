@@ -5679,6 +5679,9 @@ h1 {
     margin-top: 40px;
   }
 }
+.page-body .link {
+  display: inline-block;
+}
 
 .page-img {
   width: 100%;
