@@ -17,9 +17,10 @@ caseMain.forEach((container) => {
       toggleActions: "restart none none reset",
     },
   });
-  tl.from(caseTitle, 1.5, {
+  tl.from(caseTitle, {
     opacity: 0,
     yPercent: 50,
+    duration: 1.5,
     ease: "power2.inOut",
   });
   tl.from(
@@ -52,8 +53,9 @@ mainKVtitleChar.forEach(function (element) {
       // markers: true,
     },
   });
-  tl.from(element, 0.5, {
+  tl.from(element, {
     xPercent: -100,
+    duration: 0.5,
     ease: Power2.out,
   });
 });
@@ -114,13 +116,15 @@ revealContainers.forEach((container) => {
   });
 
   tl.set(container, { autoAlpha: 1 });
-  tl.from(container, 1.5, {
+  tl.from(container, {
     xPercent: -100,
+    duration: 1.5,
     ease: Power2.out,
   });
-  tl.from(image, 1.5, {
+  tl.from(image, {
     xPercent: 100,
     scale: 1.3,
+    duration: 1.5,
     delay: -1.5,
     ease: Power2.out,
   });

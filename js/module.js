@@ -143,6 +143,7 @@ const tl = gsap.timeline({
     stagger: 0.1,
   },
 });
+
 tl.to(".openAnItem", {
   zIndex: -1,
 });
