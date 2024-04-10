@@ -6057,6 +6057,10 @@ video {
       -ms-flex-align: center;
           align-items: center;
 }
+.about-skillTools-item .row > * {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
 @media screen and (max-width: 450px) {
   .about-skillTools-item .row > * + * {
     margin-top: 3em;

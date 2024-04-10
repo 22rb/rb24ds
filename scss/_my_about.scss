@@ -88,6 +88,10 @@
     padding: 60px;
     justify-content: center;
     align-items: center;
+    >*{
+      align-self: stretch;
+    }
+    
     @include rwd-sm{
       // padding: 60px 15px;
       >*+*{
