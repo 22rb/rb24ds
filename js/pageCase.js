@@ -20,23 +20,3 @@ gsap.from(".page-imgMain", {
   scale: 0.8,
   duration: 2,
 });
-
-//page-img
-// const pageImgContainers = document.querySelectorAll(".page-img");
-
-// pageImgContainers.forEach((container) => {
-//   const image = container.querySelector("img");
-//   const tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: container,
-//       toggleActions: "restart none none reset",
-//       // markers: true,
-//     },
-//   });
-
-//   tl.from(image, {
-//     y: 100,
-//     scale: 0.8,
-//     duration: 0.8,
-//   });
-// });
